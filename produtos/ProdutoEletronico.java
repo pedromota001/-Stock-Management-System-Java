@@ -3,8 +3,8 @@ package br.com.pedromota.projeto1POO.produtos;
 import br.com.pedromota.projeto1POO.calculos.CalculaDesconto;
 
 public class ProdutoEletronico extends Produto implements CalculaDesconto {
-    private String modelo;
-    private int quantidadeDeMemoria;
+    private final String modelo;
+    private final int quantidadeDeMemoria;
 
 
     public ProdutoEletronico(String codigoDeBarras, String nomeProduto, double precoProduto, String fornecedor, int quantidadeEstoque, String modelo, int quantidadeDeMemoria) {
@@ -27,8 +27,10 @@ public class ProdutoEletronico extends Produto implements CalculaDesconto {
             precoProduto = preco;
         }
         else if(preco > 3000 && preco < 6000){
+            precoProduto -= preco * 0.10;
         }
         else{
+            precoProduto -= preco * 0.20;
         }
     }
 

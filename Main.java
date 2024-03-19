@@ -44,7 +44,6 @@ public class Main {
                         if(tipoDeProduto == 1){
                             System.out.println("Digite o codigo de barras do produto: [8 digitos] ");
                             String codigoAdicionarAlimento = scanner.next();
-                            scanner.nextLine();
                             if(codigoAdicionarAlimento.length() != 8){
                                 System.out.println("Código de barras inválido, digite 8 digitos: ");
                                 codigoAdicionarAlimento = scanner.next();
@@ -78,7 +77,6 @@ public class Main {
                         else if(tipoDeProduto == 2){
                             System.out.println("Digite o codigo de barras do produto: [8 digitos]");
                             String codigoAdicionarEletro = scanner.next();
-                            scanner.nextLine();
                             if(codigoAdicionarEletro.length() != 8){
                                 System.out.println("Código de barras inválido, digite 8 digitos: ");
                                 codigoAdicionarEletro = scanner.next();
@@ -114,7 +112,6 @@ public class Main {
                         else{
                             System.out.println("Digite o codigo de barras do produto: [8 digitos] ");
                             String codigoAdicionarHigiene = scanner.next();
-                            scanner.nextLine();
                             if(codigoAdicionarHigiene.length() != 8){
                                 System.out.println("Código de barras inválido, digite 8 digitos: ");
                                 codigoAdicionarHigiene = scanner.next();
@@ -168,11 +165,11 @@ public class Main {
                     case 4:
                         listaProdutos.exibeEstoque(listaProdutos);
                         System.out.println("Digite o código de barras do produto que será atualizado o preço no estoque: ");
-                        String codigoAtualizaPreço = scanner.next();
+                        String codigoAtualizaPreco = scanner.next();
                         scanner.nextLine();
                         System.out.println("Digite o novo preço do produto: ");
                         double precoAtualiza = scanner.nextDouble();
-                        listaProdutos.atualizaPrecoProduto(codigoAtualizaPreço, precoAtualiza);
+                        listaProdutos.atualizaPrecoProduto(codigoAtualizaPreco, precoAtualiza);
                         break;
 
                     case 5:
